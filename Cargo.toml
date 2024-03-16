@@ -1,0 +1,17 @@
+[package]
+name = "towers"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+[dependencies.bevy]
+version = "0.13.0"
+features = [
+  "wayland",
+  "detailed_trace",
+  # TODO: Remove dynamic linking before final relase
+  "dynamic_linking",
+] 
