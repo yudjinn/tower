@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b7xv2f27hearc"
+path="res://.godot/imported/sand-rocks.obj-baef97c84e84397725445744f00abecd.mesh"
+
+[deps]
+
+files=["res://.godot/imported/sand-rocks.obj-baef97c84e84397725445744f00abecd.mesh"]
+
+source_file="res://models/Kenney/OBJ format/sand-rocks.obj"
+dest_files=["res://.godot/imported/sand-rocks.obj-baef97c84e84397725445744f00abecd.mesh", "res://.godot/imported/sand-rocks.obj-baef97c84e84397725445744f00abecd.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

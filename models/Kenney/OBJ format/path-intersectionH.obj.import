@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d21bei3lvbjp7"
+path="res://.godot/imported/path-intersectionH.obj-d91fded3f0c784f567707266b737c16f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/path-intersectionH.obj-d91fded3f0c784f567707266b737c16f.mesh"]
+
+source_file="res://models/Kenney/OBJ format/path-intersectionH.obj"
+dest_files=["res://.godot/imported/path-intersectionH.obj-d91fded3f0c784f567707266b737c16f.mesh", "res://.godot/imported/path-intersectionH.obj-d91fded3f0c784f567707266b737c16f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ufsxc6fo1qds"]
+
+[ext_resource type="ArrayMesh" uid="uid://wan66n1p2dav" path="res://models/Models/OBJ format/path-straight.obj" id="1_tbcg4"]
+
+[node name="Path-start" type="MeshInstance3D"]
+mesh = ExtResource("1_tbcg4")

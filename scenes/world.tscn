@@ -1,0 +1,1001 @@
+[gd_scene load_steps=10 format=3 uid="uid://caxaegv2hq6hm"]
+
+[ext_resource type="Script" path="res://code/world.gd" id="1_pl6l8"]
+[ext_resource type="PackedScene" uid="uid://gy5ak6xh7th1" path="res://scenes/tiles/grass.tscn" id="1_tmo2o"]
+[ext_resource type="PackedScene" uid="uid://cpcry0babigks" path="res://scenes/tiles/grass_start.tscn" id="2_4s34m"]
+[ext_resource type="Script" path="res://scenes/path_3d.gd" id="2_p13vc"]
+[ext_resource type="PackedScene" uid="uid://b3grjqvlj2fow" path="res://scenes/tiles/grass_end.tscn" id="3_eokwp"]
+[ext_resource type="PackedScene" uid="uid://cgwlde6bio1mx" path="res://scenes/tiles/grass_straight.tscn" id="4_335bh"]
+[ext_resource type="PackedScene" uid="uid://wxvy0aw141ir" path="res://scenes/tiles/grass_corner_wide.tscn" id="5_mvq72"]
+[ext_resource type="PackedScene" uid="uid://cqx7i6xscyuj" path="res://scenes/tiles/grass_corner_sharp.tscn" id="6_ke5up"]
+
+[sub_resource type="Curve3D" id="Curve3D_vtoj3"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0.993504, 0.2, 3.48997, 0, 0, 0, 0, 0, 0, 1.52987, 0.2, 3.43864, 0, 0, 0, 0, 0, 0, 2.43181, 0.2, 3.46051, 0, 0, 0, 0, 0, 0, 2.96016, 0.2, 3.56376, 0, 0, 0, 0, 0, 0, 3.4324, 0.2, 4.13178, 0, 0, 0, 0, 0, 0, 3.6985, 0.2, 4.63989, 0, 0, 0, 0, 0, 0, 4.03061, 0.2, 5.17869, 0, 0, 0, 0, 0, 0, 3.55111, 0.2, 5.16776, 0, 0, 0, 0, 0, 0, 3.02562, 0.2, 5.30439, 0, 0, 0, 0, 0, 0, 2.65142, 0.2, 5.79913, 0, 0, 0, 0, 0, 0, 2.39764, 0.2, 6.23115, 0, 0, 0, 0, 0, 0, 1.991, 0.2, 6.95064),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 12
+
+[node name="world" type="Node3D"]
+script = ExtResource("1_pl6l8")
+
+[node name="StaticBody3D86" parent="." instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00210619, -0.00627518, 0.00625801)
+
+[node name="StaticBody3D26" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 4.33)
+
+[node name="StaticBody3D171" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.732)
+
+[node name="StaticBody3D23" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.464)
+
+[node name="StaticBody3D2" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 5.196)
+
+[node name="StaticBody3D28" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 6.928)
+
+[node name="StaticBody3D24" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="StaticBody3D25" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 6.062)
+
+[node name="StaticBody3D29" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 2.598)
+
+[node name="StaticBody3D30" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 4.33)
+
+[node name="StaticBody3D19" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1.732)
+
+[node name="StaticBody3D" parent="StaticBody3D86" instance=ExtResource("2_4s34m")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 1, 0, 3.464)
+
+[node name="StaticBody3D5" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 5.196)
+
+[node name="StaticBody3D17" parent="StaticBody3D86" instance=ExtResource("3_eokwp")]
+transform = Transform3D(-0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, -0.5, 2, 0, 6.928)
+
+[node name="StaticBody3D35" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="StaticBody3D7" parent="StaticBody3D86" instance=ExtResource("4_335bh")]
+transform = Transform3D(0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, 2.5, 0, 6.062)
+
+[node name="StaticBody3D38" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 2.598)
+
+[node name="StaticBody3D39" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 4.33)
+
+[node name="StaticBody3D40" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1.732)
+
+[node name="StaticBody3D3" parent="StaticBody3D86" instance=ExtResource("4_335bh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 3.464)
+
+[node name="StaticBody3D9" parent="StaticBody3D86" instance=ExtResource("5_mvq72")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 3, 0, 5.196)
+
+[node name="StaticBody3D42" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 6.928)
+
+[node name="StaticBody3D43" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+
+[node name="StaticBody3D8" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 0.866)
+
+[node name="StaticBody3D44" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 6.062)
+
+[node name="StaticBody3D46" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 2.598)
+
+[node name="StaticBody3D48" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 1.732)
+
+[node name="StaticBody3D4" parent="StaticBody3D86" instance=ExtResource("5_mvq72")]
+transform = Transform3D(-0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, -0.5, 3, 0, 3.464)
+
+[node name="StaticBody3D14" parent="StaticBody3D86" instance=ExtResource("6_ke5up")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 5.196)
+
+[node name="StaticBody3D50" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 6.928)
+
+[node name="StaticBody3D51" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="StaticBody3D10" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 0.866)
+
+[node name="StaticBody3D52" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 6.062)
+
+[node name="StaticBody3D54" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 2.598)
+
+[node name="StaticBody3D55" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 4.33)
+
+[node name="StaticBody3D56" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 1.732)
+
+[node name="StaticBody3D57" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 3.464)
+
+[node name="StaticBody3D11" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 5.196)
+
+[node name="StaticBody3D58" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 6.928)
+
+[node name="StaticBody3D59" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+
+[node name="StaticBody3D12" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0, 0.866)
+
+[node name="StaticBody3D60" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0, 6.062)
+
+[node name="StaticBody3D62" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0, 2.598)
+
+[node name="StaticBody3D63" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0, 4.33)
+
+[node name="StaticBody3D64" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 1.732)
+
+[node name="StaticBody3D65" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 3.464)
+
+[node name="StaticBody3D13" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 5.196)
+
+[node name="StaticBody3D66" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 6.928)
+
+[node name="StaticBody3D67" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+
+[node name="StaticBody3D68" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0, 6.062)
+
+[node name="StaticBody3D70" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0, 2.598)
+
+[node name="StaticBody3D71" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0, 4.33)
+
+[node name="StaticBody3D72" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 1.732)
+
+[node name="StaticBody3D73" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 3.464)
+
+[node name="StaticBody3D15" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 5.196)
+
+[node name="StaticBody3D74" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 6.928)
+
+[node name="StaticBody3D75" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 0)
+
+[node name="StaticBody3D16" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, 0.866)
+
+[node name="StaticBody3D76" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, 6.062)
+
+[node name="StaticBody3D78" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, 2.598)
+
+[node name="StaticBody3D79" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, 4.33)
+
+[node name="StaticBody3D80" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 1.732)
+
+[node name="StaticBody3D81" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 3.464)
+
+[node name="StaticBody3D84" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.196)
+
+[node name="StaticBody3D85" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.928)
+
+[node name="StaticBody3D87" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0.866)
+
+[node name="StaticBody3D89" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 0.866)
+
+[node name="StaticBody3D90" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 0.866)
+
+[node name="StaticBody3D99" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0, 0.866)
+
+[node name="StaticBody3D88" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 6.062)
+
+[node name="StaticBody3D91" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 7.794)
+
+[node name="StaticBody3D92" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 7.794)
+
+[node name="StaticBody3D93" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 7.794)
+
+[node name="StaticBody3D94" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 7.794)
+
+[node name="StaticBody3D95" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 7.794)
+
+[node name="StaticBody3D96" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0, 7.794)
+
+[node name="StaticBody3D97" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0, 7.794)
+
+[node name="StaticBody3D98" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, 7.794)
+
+[node name="StaticBody3D21" parent="StaticBody3D86" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 2.598)
+
+[node name="StaticBody3D6" parent="StaticBody3D86" instance=ExtResource("4_335bh")]
+transform = Transform3D(0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, 0.5, 3.5, 0, 4.33)
+
+[node name="StaticBody3D89" parent="." instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.99789, -0.00627518, 0.00625801)
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D26" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 4.33)
+
+[node name="StaticBody3D171" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.732)
+
+[node name="StaticBody3D23" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.464)
+
+[node name="StaticBody3D2" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 5.196)
+
+[node name="StaticBody3D28" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 6.928)
+
+[node name="StaticBody3D24" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="StaticBody3D25" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 6.062)
+
+[node name="StaticBody3D29" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 2.598)
+
+[node name="StaticBody3D30" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 4.33)
+
+[node name="StaticBody3D19" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1.732)
+
+[node name="StaticBody3D31" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 3.464)
+
+[node name="StaticBody3D5" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 5.196)
+
+[node name="StaticBody3D32" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 6.928)
+
+[node name="StaticBody3D35" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="StaticBody3D36" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 6.062)
+
+[node name="StaticBody3D38" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 2.598)
+
+[node name="StaticBody3D39" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 4.33)
+
+[node name="StaticBody3D40" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1.732)
+
+[node name="StaticBody3D41" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 3.464)
+
+[node name="StaticBody3D7" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 5.196)
+
+[node name="StaticBody3D42" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 6.928)
+
+[node name="StaticBody3D43" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+
+[node name="StaticBody3D8" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 0.866)
+
+[node name="StaticBody3D44" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 6.062)
+
+[node name="StaticBody3D46" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 2.598)
+
+[node name="StaticBody3D47" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 4.33)
+
+[node name="StaticBody3D48" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 1.732)
+
+[node name="StaticBody3D49" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 3.464)
+
+[node name="StaticBody3D9" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 5.196)
+
+[node name="StaticBody3D50" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 6.928)
+
+[node name="StaticBody3D51" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="StaticBody3D10" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 0.866)
+
+[node name="StaticBody3D52" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 6.062)
+
+[node name="StaticBody3D54" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 2.598)
+
+[node name="StaticBody3D55" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 4.33)
+
+[node name="StaticBody3D56" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 1.732)
+
+[node name="StaticBody3D57" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 3.464)
+
+[node name="StaticBody3D11" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 5.196)
+
+[node name="StaticBody3D58" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 6.928)
+
+[node name="StaticBody3D59" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+
+[node name="StaticBody3D12" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0, 0.866)
+
+[node name="StaticBody3D60" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0, 6.062)
+
+[node name="StaticBody3D62" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0, 2.598)
+
+[node name="StaticBody3D63" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0, 4.33)
+
+[node name="StaticBody3D64" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 1.732)
+
+[node name="StaticBody3D65" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 3.464)
+
+[node name="StaticBody3D13" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 5.196)
+
+[node name="StaticBody3D66" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 6.928)
+
+[node name="StaticBody3D67" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+
+[node name="StaticBody3D68" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0, 6.062)
+
+[node name="StaticBody3D70" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0, 2.598)
+
+[node name="StaticBody3D71" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0, 4.33)
+
+[node name="StaticBody3D72" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 1.732)
+
+[node name="StaticBody3D73" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 3.464)
+
+[node name="StaticBody3D15" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 5.196)
+
+[node name="StaticBody3D74" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 6.928)
+
+[node name="StaticBody3D75" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 0)
+
+[node name="StaticBody3D16" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, 0.866)
+
+[node name="StaticBody3D76" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, 6.062)
+
+[node name="StaticBody3D78" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, 2.598)
+
+[node name="StaticBody3D79" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, 4.33)
+
+[node name="StaticBody3D80" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 1.732)
+
+[node name="StaticBody3D81" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 3.464)
+
+[node name="StaticBody3D84" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.196)
+
+[node name="StaticBody3D85" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.928)
+
+[node name="StaticBody3D87" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0.866)
+
+[node name="StaticBody3D89" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 0.866)
+
+[node name="StaticBody3D90" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 0.866)
+
+[node name="StaticBody3D99" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0, 0.866)
+
+[node name="StaticBody3D88" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 6.062)
+
+[node name="StaticBody3D91" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 7.794)
+
+[node name="StaticBody3D92" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 7.794)
+
+[node name="StaticBody3D93" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 7.794)
+
+[node name="StaticBody3D94" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 7.794)
+
+[node name="StaticBody3D95" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 7.794)
+
+[node name="StaticBody3D96" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0, 7.794)
+
+[node name="StaticBody3D97" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0, 7.794)
+
+[node name="StaticBody3D98" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, 7.794)
+
+[node name="StaticBody3D21" parent="StaticBody3D89" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 2.598)
+
+[node name="StaticBody3D87" parent="." instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.002, -0.006, 8.66)
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D26" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 4.33)
+
+[node name="StaticBody3D171" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.732)
+
+[node name="StaticBody3D23" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.464)
+
+[node name="StaticBody3D2" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 5.196)
+
+[node name="StaticBody3D28" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 6.928)
+
+[node name="StaticBody3D24" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="StaticBody3D25" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 6.062)
+
+[node name="StaticBody3D29" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 2.598)
+
+[node name="StaticBody3D30" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 4.33)
+
+[node name="StaticBody3D19" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1.732)
+
+[node name="StaticBody3D31" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 3.464)
+
+[node name="StaticBody3D5" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 5.196)
+
+[node name="StaticBody3D32" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 6.928)
+
+[node name="StaticBody3D35" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="StaticBody3D36" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 6.062)
+
+[node name="StaticBody3D38" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 2.598)
+
+[node name="StaticBody3D39" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 4.33)
+
+[node name="StaticBody3D40" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1.732)
+
+[node name="StaticBody3D41" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 3.464)
+
+[node name="StaticBody3D7" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 5.196)
+
+[node name="StaticBody3D42" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 6.928)
+
+[node name="StaticBody3D43" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+
+[node name="StaticBody3D8" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 0.866)
+
+[node name="StaticBody3D44" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 6.062)
+
+[node name="StaticBody3D46" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 2.598)
+
+[node name="StaticBody3D47" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 4.33)
+
+[node name="StaticBody3D48" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 1.732)
+
+[node name="StaticBody3D49" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 3.464)
+
+[node name="StaticBody3D9" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 5.196)
+
+[node name="StaticBody3D50" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 6.928)
+
+[node name="StaticBody3D51" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="StaticBody3D10" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 0.866)
+
+[node name="StaticBody3D52" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 6.062)
+
+[node name="StaticBody3D54" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 2.598)
+
+[node name="StaticBody3D55" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 4.33)
+
+[node name="StaticBody3D56" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 1.732)
+
+[node name="StaticBody3D57" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 3.464)
+
+[node name="StaticBody3D11" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 5.196)
+
+[node name="StaticBody3D58" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 6.928)
+
+[node name="StaticBody3D59" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+
+[node name="StaticBody3D12" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0, 0.866)
+
+[node name="StaticBody3D60" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0, 6.062)
+
+[node name="StaticBody3D62" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0, 2.598)
+
+[node name="StaticBody3D63" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0, 4.33)
+
+[node name="StaticBody3D64" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 1.732)
+
+[node name="StaticBody3D65" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 3.464)
+
+[node name="StaticBody3D13" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 5.196)
+
+[node name="StaticBody3D66" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 6.928)
+
+[node name="StaticBody3D67" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+
+[node name="StaticBody3D68" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0, 6.062)
+
+[node name="StaticBody3D70" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0, 2.598)
+
+[node name="StaticBody3D71" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0, 4.33)
+
+[node name="StaticBody3D72" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 1.732)
+
+[node name="StaticBody3D73" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 3.464)
+
+[node name="StaticBody3D15" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 5.196)
+
+[node name="StaticBody3D74" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 6.928)
+
+[node name="StaticBody3D75" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 0)
+
+[node name="StaticBody3D16" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, 0.866)
+
+[node name="StaticBody3D76" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, 6.062)
+
+[node name="StaticBody3D78" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, 2.598)
+
+[node name="StaticBody3D79" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, 4.33)
+
+[node name="StaticBody3D80" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 1.732)
+
+[node name="StaticBody3D81" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 3.464)
+
+[node name="StaticBody3D84" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.196)
+
+[node name="StaticBody3D85" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.928)
+
+[node name="StaticBody3D87" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0.866)
+
+[node name="StaticBody3D89" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 0.866)
+
+[node name="StaticBody3D90" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 0.866)
+
+[node name="StaticBody3D99" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0, 0.866)
+
+[node name="StaticBody3D88" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 6.062)
+
+[node name="StaticBody3D91" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 7.794)
+
+[node name="StaticBody3D92" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 7.794)
+
+[node name="StaticBody3D93" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 7.794)
+
+[node name="StaticBody3D94" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 7.794)
+
+[node name="StaticBody3D95" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 7.794)
+
+[node name="StaticBody3D96" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0, 7.794)
+
+[node name="StaticBody3D97" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0, 7.794)
+
+[node name="StaticBody3D98" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, 7.794)
+
+[node name="StaticBody3D21" parent="StaticBody3D87" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 2.598)
+
+[node name="StaticBody3D88" parent="." instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.998, -0.006, 8.66)
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D26" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 4.33)
+
+[node name="StaticBody3D171" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.732)
+
+[node name="StaticBody3D23" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.464)
+
+[node name="StaticBody3D2" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 5.196)
+
+[node name="StaticBody3D28" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 6.928)
+
+[node name="StaticBody3D24" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="StaticBody3D25" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 6.062)
+
+[node name="StaticBody3D29" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 2.598)
+
+[node name="StaticBody3D30" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 4.33)
+
+[node name="StaticBody3D19" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1.732)
+
+[node name="StaticBody3D31" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 3.464)
+
+[node name="StaticBody3D5" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 5.196)
+
+[node name="StaticBody3D32" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 6.928)
+
+[node name="StaticBody3D35" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="StaticBody3D36" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 6.062)
+
+[node name="StaticBody3D38" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 2.598)
+
+[node name="StaticBody3D39" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 4.33)
+
+[node name="StaticBody3D40" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1.732)
+
+[node name="StaticBody3D41" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 3.464)
+
+[node name="StaticBody3D7" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 5.196)
+
+[node name="StaticBody3D42" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 6.928)
+
+[node name="StaticBody3D43" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+
+[node name="StaticBody3D8" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 0.866)
+
+[node name="StaticBody3D44" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 6.062)
+
+[node name="StaticBody3D46" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 2.598)
+
+[node name="StaticBody3D47" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 4.33)
+
+[node name="StaticBody3D48" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 1.732)
+
+[node name="StaticBody3D49" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 3.464)
+
+[node name="StaticBody3D9" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 5.196)
+
+[node name="StaticBody3D50" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 6.928)
+
+[node name="StaticBody3D51" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="StaticBody3D10" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 0.866)
+
+[node name="StaticBody3D52" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 6.062)
+
+[node name="StaticBody3D54" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 2.598)
+
+[node name="StaticBody3D55" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 4.33)
+
+[node name="StaticBody3D56" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 1.732)
+
+[node name="StaticBody3D57" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 3.464)
+
+[node name="StaticBody3D11" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 5.196)
+
+[node name="StaticBody3D58" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 6.928)
+
+[node name="StaticBody3D59" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+
+[node name="StaticBody3D12" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0, 0.866)
+
+[node name="StaticBody3D60" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0, 6.062)
+
+[node name="StaticBody3D62" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0, 2.598)
+
+[node name="StaticBody3D63" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0, 4.33)
+
+[node name="StaticBody3D64" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 1.732)
+
+[node name="StaticBody3D65" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 3.464)
+
+[node name="StaticBody3D13" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 5.196)
+
+[node name="StaticBody3D66" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 6.928)
+
+[node name="StaticBody3D67" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+
+[node name="StaticBody3D68" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0, 6.062)
+
+[node name="StaticBody3D70" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0, 2.598)
+
+[node name="StaticBody3D71" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0, 4.33)
+
+[node name="StaticBody3D72" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 1.732)
+
+[node name="StaticBody3D73" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 3.464)
+
+[node name="StaticBody3D15" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 5.196)
+
+[node name="StaticBody3D74" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 6.928)
+
+[node name="StaticBody3D75" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 0)
+
+[node name="StaticBody3D16" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, 0.866)
+
+[node name="StaticBody3D76" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, 6.062)
+
+[node name="StaticBody3D78" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, 2.598)
+
+[node name="StaticBody3D79" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, 4.33)
+
+[node name="StaticBody3D80" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 1.732)
+
+[node name="StaticBody3D81" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 3.464)
+
+[node name="StaticBody3D84" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.196)
+
+[node name="StaticBody3D85" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.928)
+
+[node name="StaticBody3D87" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0.866)
+
+[node name="StaticBody3D89" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 0.866)
+
+[node name="StaticBody3D90" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 0.866)
+
+[node name="StaticBody3D99" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0, 0.866)
+
+[node name="StaticBody3D88" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 6.062)
+
+[node name="StaticBody3D91" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 7.794)
+
+[node name="StaticBody3D92" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 7.794)
+
+[node name="StaticBody3D93" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 7.794)
+
+[node name="StaticBody3D94" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 7.794)
+
+[node name="StaticBody3D95" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 7.794)
+
+[node name="StaticBody3D96" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0, 7.794)
+
+[node name="StaticBody3D97" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0, 7.794)
+
+[node name="StaticBody3D98" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, 7.794)
+
+[node name="StaticBody3D21" parent="StaticBody3D88" instance=ExtResource("1_tmo2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 2.598)
+
+[node name="Path3D" type="Path3D" parent="."]
+curve = SubResource("Curve3D_vtoj3")
+script = ExtResource("2_p13vc")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.5, 0.75, -0.433013, -1.46409e-07, 0.5, 0.866026, 0.866025, 0.433012, -0.25, 0, 5, 1)
+fov = 115.528
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Camera3D"]
+transform = Transform3D(1, 0, -1.49012e-08, 0, 1, 7.45058e-09, -1.49012e-08, -7.45058e-09, 1, 2.56218, 8.28109, -4.78109)
+light_energy = 4.363
+light_indirect_energy = 12.822
+omni_range = 344.354
+
+[node name="SpawnTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]

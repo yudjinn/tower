@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://faayp8mars1w"
+path="res://.godot/imported/river-intersectionC.obj-67f88651dd0324145801ed9c05a3a0ee.mesh"
+
+[deps]
+
+files=["res://.godot/imported/river-intersectionC.obj-67f88651dd0324145801ed9c05a3a0ee.mesh"]
+
+source_file="res://models/Kenney/OBJ format/river-intersectionC.obj"
+dest_files=["res://.godot/imported/river-intersectionC.obj-67f88651dd0324145801ed9c05a3a0ee.mesh", "res://.godot/imported/river-intersectionC.obj-67f88651dd0324145801ed9c05a3a0ee.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

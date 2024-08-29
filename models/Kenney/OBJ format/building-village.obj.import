@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://7ussrwa44mcc"
+path="res://.godot/imported/building-village.obj-509890b152052734179c943ac7628b69.mesh"
+
+[deps]
+
+files=["res://.godot/imported/building-village.obj-509890b152052734179c943ac7628b69.mesh"]
+
+source_file="res://models/Kenney/OBJ format/building-village.obj"
+dest_files=["res://.godot/imported/building-village.obj-509890b152052734179c943ac7628b69.mesh", "res://.godot/imported/building-village.obj-509890b152052734179c943ac7628b69.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

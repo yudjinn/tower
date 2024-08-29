@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dcuh2sr4g0kmx"]
+
+[ext_resource type="ArrayMesh" uid="uid://vv2xu23hij8c" path="res://models/Models/OBJ format/path-square-end.obj" id="1_rri8c"]
+
+[node name="Path-start" type="MeshInstance3D"]
+mesh = ExtResource("1_rri8c")

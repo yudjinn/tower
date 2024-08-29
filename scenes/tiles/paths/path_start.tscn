@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://24hh1ixooeh8"]
+
+[ext_resource type="ArrayMesh" uid="uid://fnt6gqflgavb" path="res://models/Models/OBJ format/path-start.obj" id="1_2kpdf"]
+
+[node name="Path-start" type="MeshInstance3D"]
+mesh = ExtResource("1_2kpdf")

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://qggg47tqubpd"
+path="res://.godot/imported/path-end.obj-b12a50fe593312ae63f79614bf621dc6.mesh"
+
+[deps]
+
+files=["res://.godot/imported/path-end.obj-b12a50fe593312ae63f79614bf621dc6.mesh"]
+
+source_file="res://models/Kenney/OBJ format/path-end.obj"
+dest_files=["res://.godot/imported/path-end.obj-b12a50fe593312ae63f79614bf621dc6.mesh", "res://.godot/imported/path-end.obj-b12a50fe593312ae63f79614bf621dc6.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

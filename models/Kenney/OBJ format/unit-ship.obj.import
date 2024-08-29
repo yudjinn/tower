@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://n1e2ejf028ti"
+path="res://.godot/imported/unit-ship.obj-33123487c094b40cacc81a21f2080494.mesh"
+
+[deps]
+
+files=["res://.godot/imported/unit-ship.obj-33123487c094b40cacc81a21f2080494.mesh"]
+
+source_file="res://models/Kenney/OBJ format/unit-ship.obj"
+dest_files=["res://.godot/imported/unit-ship.obj-33123487c094b40cacc81a21f2080494.mesh", "res://.godot/imported/unit-ship.obj-33123487c094b40cacc81a21f2080494.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
