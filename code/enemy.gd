@@ -14,3 +14,8 @@ func _physics_process(delta: float) -> void:
 	
 	if path.get_progress_ratio() >= 0.99:
 		path.queue_free()
+
+func take_damage(_damage: int) -> void:
+	health -= _damage
+	if health <= 0:
+		queue_free()

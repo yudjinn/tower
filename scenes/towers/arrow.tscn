@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://drj1gupuflahu"]
+
+[ext_resource type="Script" path="res://code/towers/arrow.gd" id="1_6mxxd"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_al8hp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2v6p8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_evvfh"]
+
+[node name="Arrow" type="CharacterBody3D"]
+script = ExtResource("1_6mxxd")
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="."]
+transform = Transform3D(1.91069e-16, -4.37114e-09, -0.1, -0.1, -4.37114e-09, 0, -4.37114e-09, 0.1, -4.37114e-09, 0, 0, 0)
+mesh = SubResource("PrismMesh_al8hp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+shape = SubResource("BoxShape3D_2v6p8")
+
+[node name="Collision" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collision"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+shape = SubResource("BoxShape3D_evvfh")
+
+[connection signal="body_entered" from="Collision" to="." method="_on_collision_body_entered"]

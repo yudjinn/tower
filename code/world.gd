@@ -3,7 +3,7 @@ extends Node3D
 
 @onready var enemy: PackedScene = preload("res://scenes/mobs/minon.tscn")
 
-var enemies_to_spawn : int = 3
+var enemies_to_spawn : int = 10
 
 var can_spawn : bool = true
 

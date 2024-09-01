@@ -14,3 +14,11 @@ config/name="tower-defense"
 run/main_scene="res://scenes/world.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/extra_snaps/plugin.cfg")
+
+[global_group]
+
+Enemy=""
