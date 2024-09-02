@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://10p1emtab3of"]
+
+[ext_resource type="ArrayMesh" uid="uid://dli4j06giydsp" path="res://models/Models/objects/obj/castle.obj" id="1_fx2wi"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_raevo"]
+size = Vector3(2, 2, 2)
+
+[node name="Castle" type="StaticBody3D"]
+
+[node name="Castle" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_fx2wi")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("BoxShape3D_raevo")

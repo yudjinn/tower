@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dalxx4g5hrqk6"
+path="res://.godot/imported/square_rock_waterOuterCorner_noSides.obj-730edee4894a79326de1cbdc32e6355c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/square_rock_waterOuterCorner_noSides.obj-730edee4894a79326de1cbdc32e6355c.mesh"]
+
+source_file="res://models/Models/tiles/square/obj/square_rock_waterOuterCorner_noSides.obj"
+dest_files=["res://.godot/imported/square_rock_waterOuterCorner_noSides.obj-730edee4894a79326de1cbdc32e6355c.mesh", "res://.godot/imported/square_rock_waterOuterCorner_noSides.obj-730edee4894a79326de1cbdc32e6355c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

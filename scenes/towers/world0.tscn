@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cbq83ypyqrfjq"]
+
+[sub_resource type="Curve3D" id="Curve3D_pp3b5"]
+
+[node name="world" type="Node3D"]
+
+[node name="Path3D" type="Path3D" parent="."]
+curve = SubResource("Curve3D_pp3b5")
+
+[node name="SpawnTimer" type="Timer" parent="."]

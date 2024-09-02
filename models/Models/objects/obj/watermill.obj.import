@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d1jys70eps140"
+path="res://.godot/imported/watermill.obj-5f18cde5005cce8fdcb1f3c2f27c809c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/watermill.obj-5f18cde5005cce8fdcb1f3c2f27c809c.mesh"]
+
+source_file="res://models/Models/objects/obj/watermill.obj"
+dest_files=["res://.godot/imported/watermill.obj-5f18cde5005cce8fdcb1f3c2f27c809c.mesh", "res://.godot/imported/watermill.obj-5f18cde5005cce8fdcb1f3c2f27c809c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bj0djqv42ok54"
+path="res://.godot/imported/watchtower.obj-e6d80563902f544a1cc9fb98ca5eaeee.mesh"
+
+[deps]
+
+files=["res://.godot/imported/watchtower.obj-e6d80563902f544a1cc9fb98ca5eaeee.mesh"]
+
+source_file="res://models/Models/objects/obj/watchtower.obj"
+dest_files=["res://.godot/imported/watchtower.obj-e6d80563902f544a1cc9fb98ca5eaeee.mesh", "res://.godot/imported/watchtower.obj-e6d80563902f544a1cc9fb98ca5eaeee.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

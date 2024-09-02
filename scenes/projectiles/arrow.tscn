@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://d4mtqqpbv3jcw"]
+
+[ext_resource type="ArrayMesh" uid="uid://crirkhgm5jlvi" path="res://models/crossbow_shaft.obj" id="1_oc7nk"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_0k64j"]
+height = 1.12641
+radius = 0.109675
+
+[node name="Area3D" type="Area3D"]
+
+[node name="CrossbowShaft" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.1, 0, -8.74228e-09, 0, 0.1, 0, 8.74228e-09, 0, -0.1, 0.00322297, -0.105, -0.14162)
+mesh = ExtResource("1_oc7nk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-1, -8.74228e-08, 3.82137e-15, 0, -4.37114e-08, -1, 8.74228e-08, -1, 4.37114e-08, 0, 0, -0.076313)
+shape = SubResource("CylinderShape3D_0k64j")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(-2, -2.26494e-07, 1.32005e-14, 0, -6.55671e-08, -2, 3.01992e-07, -1.5, 8.74228e-08, 0, 0, -0.076313)
+shape = SubResource("CylinderShape3D_0k64j")

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ce60nwef3tw1l"
+path="res://.godot/imported/square_sand_waterInnerCorner_noSides.obj-9967c39967ad18d1c6390c0c4eac7e41.mesh"
+
+[deps]
+
+files=["res://.godot/imported/square_sand_waterInnerCorner_noSides.obj-9967c39967ad18d1c6390c0c4eac7e41.mesh"]
+
+source_file="res://models/Models/tiles/square/obj/square_sand_waterInnerCorner_noSides.obj"
+dest_files=["res://.godot/imported/square_sand_waterInnerCorner_noSides.obj-9967c39967ad18d1c6390c0c4eac7e41.mesh", "res://.godot/imported/square_sand_waterInnerCorner_noSides.obj-9967c39967ad18d1c6390c0c4eac7e41.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

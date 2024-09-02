@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://3pxleanrlqlc"
+path="res://.godot/imported/square_forest.obj-bb9cd6cf2577e529c9d7ec8c9e107855.mesh"
+
+[deps]
+
+files=["res://.godot/imported/square_forest.obj-bb9cd6cf2577e529c9d7ec8c9e107855.mesh"]
+
+source_file="res://models/Models/tiles/square/obj/square_forest.obj"
+dest_files=["res://.godot/imported/square_forest.obj-bb9cd6cf2577e529c9d7ec8c9e107855.mesh", "res://.godot/imported/square_forest.obj-bb9cd6cf2577e529c9d7ec8c9e107855.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

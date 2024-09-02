@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://compuk1olvd25"]
+
+[ext_resource type="ArrayMesh" uid="uid://dwcpk47838yub" path="res://models/Models/tiles/square/obj/square_forest_roadB_detail.obj" id="1_g6gjo"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3ife6"]
+size = Vector3(2, 1, 2)
+
+[node name="ForestRoadStraight" type="StaticBody3D"]
+
+[node name="SquareForestRoadBDetail" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_g6gjo")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_3ife6")
