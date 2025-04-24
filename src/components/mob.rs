@@ -1,4 +1,3 @@
-// TODO: Move this to mob stuffs
 pub enum ArmorType {
     Standard,
     Light,
@@ -7,20 +6,18 @@ pub enum ArmorType {
 }
 
 pub enum DeathEffectType {
-    ExplosionDamage,
-    SpeedUp,
-    AreaHeal,
-    TowerStun,
+    ExplosionDamage { damage: usize },
+    SpeedUp { percent: usize },
+    AreaHeal { amount: usize },
+    TowerStun { duration: usize },
 }
 
 pub struct DeathEffect {
     radius: f32,
-    // only pertinent for some effect types
-    value: Option<f32>,
     death_effect_type: DeathEffectType,
 }
 
-trait Mob {
+pub trait Mob {
     fn armor_type(&self) -> &ArmorType;
     fn movement_speed(&self) -> f32;
     fn health(&self) -> f32;

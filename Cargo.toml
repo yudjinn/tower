@@ -6,12 +6,19 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+bevy_asset_loader = { version = "0.22.0", features = ["2d", "progress_tracking"] }
 
 [dependencies.bevy]
-version = "0.13.0"
+version = "0.15"
 features = [
-  "wayland",
-  "detailed_trace",
+  # "wayland",
+  # "detailed_trace",
   # TODO: Remove dynamic linking before final relase
   "dynamic_linking",
 ] 
+
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 3

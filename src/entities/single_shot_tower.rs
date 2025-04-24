@@ -1,5 +1,8 @@
-use super::base::{DamageType, FiringType, StatChange, StatChangeType, Tower};
+use bevy::prelude::*;
 
+use crate::components::tower::{DamageType, FiringType, StatChange, Tower};
+
+#[derive(Component)]
 pub struct SingleShotTower {
     firing_type: FiringType,
     damage_type: DamageType,
@@ -31,16 +34,7 @@ impl Tower for SingleShotTower {
             4 => 250,
             _ => 9999,
         };
-        StatChange::with_stat_change(
-            self.stat_changes
-                .iter()
-                .filter(|s| match s.stat_change_type {
-                    StatChangeType::CostChangePercent => true,
-                    _ => false,
-                })
-                .collect(),
-            base as f32,
-        ) as u32
+        todo!()
     }
 
     fn fire_rate(&self) -> f32 {
@@ -51,16 +45,7 @@ impl Tower for SingleShotTower {
             4 => 2.,
             _ => 0.,
         };
-        StatChange::with_stat_change(
-            self.stat_changes
-                .iter()
-                .filter(|s| match s.stat_change_type {
-                    StatChangeType::FireRateChangePercent => true,
-                    _ => false,
-                })
-                .collect(),
-            base,
-        )
+        todo!()
     }
 
     fn damage(&self) -> f32 {
@@ -71,16 +56,7 @@ impl Tower for SingleShotTower {
             4 => 7.,
             _ => 0.,
         };
-        StatChange::with_stat_change(
-            self.stat_changes
-                .iter()
-                .filter(|s| match s.stat_change_type {
-                    StatChangeType::DamageChangePercent => true,
-                    _ => false,
-                })
-                .collect(),
-            base,
-        )
+        todo!()
     }
 
     fn range(&self) -> f32 {
@@ -91,16 +67,7 @@ impl Tower for SingleShotTower {
             4 => 5.1,
             _ => 0.,
         };
-        StatChange::with_stat_change(
-            self.stat_changes
-                .iter()
-                .filter(|s| match s.stat_change_type {
-                    StatChangeType::RangeChangePercent => true,
-                    _ => false,
-                })
-                .collect(),
-            base,
-        )
+        todo!()
     }
 
     fn set_level(&mut self, level: u32) {
