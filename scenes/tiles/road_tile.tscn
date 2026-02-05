@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://p7l8n1kt1dx0"]
+
+[ext_resource type="Script" uid="uid://drcwnsbgktu1c" path="res://scripts/tiles/road_tile.gd" id="1_30dsw"]
+
+[node name="RoadTile" type="Node2D" unique_id=151368076]
+script = ExtResource("1_30dsw")

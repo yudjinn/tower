@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TowerData" format=3 uid="uid://b5c7xc63rxxh2"]
+
+[ext_resource type="Script" uid="uid://ctby73isdckde" path="res://scripts/tiles/tower_data.gd" id="1_k8q3e"]
+
+[resource]
+script = ExtResource("1_k8q3e")
+tower_name = "Archer"
+damage = 10.0
+fire_rate = 1.0
+range = 150.0
+metadata/_custom_type_script = "uid://ctby73isdckde"

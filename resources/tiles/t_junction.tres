@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="GameTileData" format=3 uid="uid://b510pm6473quf"]
+
+[ext_resource type="Script" uid="uid://5d4gkpkn2m8b" path="res://scripts/tiles/tile_data.gd" id="1_qxupg"]
+[ext_resource type="Script" uid="uid://c0l81j24cnovl" path="res://scripts/towers/towerslot.gd" id="2_rmhob"]
+[ext_resource type="Resource" uid="uid://b5c7xc63rxxh2" path="res://resources/towers/archer_data.tres" id="3_rmhob"]
+
+[sub_resource type="Resource" id="Resource_xkhju"]
+script = ExtResource("2_rmhob")
+local_offset = Vector2i(-1, 0)
+tower_type = ExtResource("3_rmhob")
+facing_edge = 3
+metadata/_custom_type_script = "uid://c0l81j24cnovl"
+
+[sub_resource type="Resource" id="Resource_x2hbf"]
+script = ExtResource("2_rmhob")
+local_offset = Vector2i(1, 0)
+tower_type = ExtResource("3_rmhob")
+facing_edge = 1
+metadata/_custom_type_script = "uid://c0l81j24cnovl"
+
+[resource]
+script = ExtResource("1_qxupg")
+tile_name = "T-Junction"
+road_edges = Array[bool]([true, true, true, false])
+tower_slots = Array[ExtResource("2_rmhob")]([SubResource("Resource_xkhju"), SubResource("Resource_x2hbf")])
+metadata/_custom_type_script = "uid://5d4gkpkn2m8b"

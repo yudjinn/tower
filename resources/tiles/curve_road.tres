@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="GameTileData" format=3 uid="uid://t6x7sb17qq2t"]
+
+[ext_resource type="Script" uid="uid://5d4gkpkn2m8b" path="res://scripts/tiles/tile_data.gd" id="1_e51e0"]
+[ext_resource type="Script" uid="uid://c0l81j24cnovl" path="res://scripts/towers/towerslot.gd" id="2_vedil"]
+[ext_resource type="Resource" uid="uid://b5c7xc63rxxh2" path="res://resources/towers/archer_data.tres" id="3_vedil"]
+
+[sub_resource type="Resource" id="Resource_31cja"]
+script = ExtResource("2_vedil")
+local_offset = Vector2i(1, -1)
+tower_type = ExtResource("3_vedil")
+facing_edge = 2
+metadata/_custom_type_script = "uid://c0l81j24cnovl"
+
+[resource]
+script = ExtResource("1_e51e0")
+tile_name = "Curve"
+road_edges = Array[bool]([true, true, false, false])
+tower_slots = Array[ExtResource("2_vedil")]([SubResource("Resource_31cja")])
+metadata/_custom_type_script = "uid://5d4gkpkn2m8b"

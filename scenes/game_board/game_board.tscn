@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b7yxto8851tof"]
+
+[node name="GameBoard" type="Node2D" unique_id=1291027823]
+
+[node name="TileContainer" type="Node2D" parent="." unique_id=1939222089]
+
+[node name="DemonContainer" type="Node2D" parent="." unique_id=1741307931]
+y_sort_enabled = true
+
+[node name="ProjectileContainer" type="Node2D" parent="." unique_id=645361355]
