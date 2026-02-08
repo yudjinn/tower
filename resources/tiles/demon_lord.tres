@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="GameTileData" format=3 uid="uid://cl8lb0crksdsc"]
+
+[ext_resource type="Script" uid="uid://5d4gkpkn2m8b" path="res://scripts/tiles/tile_data.gd" id="1_1mdcs"]
+[ext_resource type="Script" uid="uid://c0l81j24cnovl" path="res://scripts/towers/towerslot.gd" id="2_w3ut3"]
+
+[resource]
+script = ExtResource("1_1mdcs")
+tile_name = "Demon Lord"
+road_edges = Array[bool]([true, true, true, true])
+metadata/_custom_type_script = "uid://5d4gkpkn2m8b"

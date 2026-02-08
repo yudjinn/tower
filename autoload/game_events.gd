@@ -9,6 +9,7 @@ enum GamePhase {
 	RESOLVE
 }
 signal phase_changed(phase: GamePhase)
+signal draft_options_ready(options: Array[GameTileData])
 
 # Tile Lifecycle
 signal tile_drafted(tile_data)

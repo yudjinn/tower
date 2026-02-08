@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_k8q3e")
 tower_name = "Archer"
-damage = 10.0
+damage = 100.0
 fire_rate = 1.0
-range = 150.0
+range = 100.0
 metadata/_custom_type_script = "uid://ctby73isdckde"

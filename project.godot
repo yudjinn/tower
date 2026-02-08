@@ -19,6 +19,15 @@ config/icon="res://icon.svg"
 
 GameEvents="*uid://c0bcvvrxjlmru"
 
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+
+[dotnet]
+
+project/assembly_name="godot_td"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

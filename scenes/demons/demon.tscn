@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://fa4hatthjmvf"]
+
+[ext_resource type="Script" uid="uid://duueq4ql71rt2" path="res://scripts/demons/demon.gd" id="1_ci1r6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ci1r6"]
+radius = 8.0
+
+[node name="Demon" type="Node2D" unique_id=1833920496]
+script = ExtResource("1_ci1r6")
+
+[node name="HitArea" type="Area2D" parent="." unique_id=1008282227]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitArea" unique_id=894974390]
+shape = SubResource("CircleShape2D_ci1r6")
